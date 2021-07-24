@@ -273,7 +273,7 @@ if __name__ == '__main__':
     for name, child in model_ft.named_children():
         print(str(i) + ':' + name)
         i += 1
-    freeze.freeze_by_idxs(model_ft, [i for i in range(7)])
+    freeze.freeze_by_idxs(model_ft, [i for i in range(8)])
     model_ft = model_ft.to(device)
     torchsummary.summary(model_ft, (3, 64, 64))
     criterion = nn.CrossEntropyLoss()

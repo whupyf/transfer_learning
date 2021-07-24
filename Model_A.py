@@ -276,6 +276,7 @@ if __name__ == '__main__':
     freeze.freeze_by_idxs(model_ft, [i for i in range(7)])
     model_ft = model_ft.to(device)
     torchsummary.summary(model_ft, (3, 64, 64))
+    print(model_ft)
     criterion = nn.CrossEntropyLoss()
 
     # Observe that all parameters are being optimized
